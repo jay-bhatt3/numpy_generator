@@ -222,7 +222,7 @@ class BatchFromFilesMixin():
         # self.filepaths is dynamic, is better to call it once outside the loop
         filepaths = self.filepaths
         for i, j in enumerate(index_array):
-            img = np.load(filepaths[j])
+            img = np.load(filepaths[j])[:5]
             
             x = img
             # Pillow images should be closed after `load_img`,
